@@ -37,26 +37,36 @@ function selectContent(clicked_id){
 	// get current menu showed and reset var content
 	var currentMenu = parseInt(clicked_id.match(/[0-9]+/)[0],10);
 	content = currentMenu;
-	// function remove class for
-	if(select == 1){
-		removeClassActive(clicked_id,17);
+	switch (select){
+		case 1:
+			removeClassActive(clicked_id,17);	
+			break;
+
+		case 2:
+			removeClassActive(clicked_id,19);
+			break;
+
+		case 3:
+			removeClassActive(clicked_id,19);
+		break;
 	}
-	if(select == 2){
-		removeClassActive(clicked_id,19);
-	} 
+	// function remove class for
 	
 	$('#pageContent').children().hide();
 	$('#initTraining').hide();
 
-	if(select == 1){
-		for(start; start<=end; start ++){
-			$('#pageContent').append('<img class="img-responsive" src="imagenes/1_fundamentals/'+start+'.PNG"'+'>');		
-		}
-	}
-	if(select == 2){
-		for(start; start<=end; start ++){
-			$('#pageContent').append('<img class="img-responsive" src="imagenes/2_concept_model/'+start+'.PNG"'+'>');		
-		}	
+	switch (select){
+		case 1:
+			for(start; start<=end; start ++){
+				$('#pageContent').append('<img class="img-responsive" src="imagenes/1_fundamentals/'+start+'.PNG"'+'>');		
+			}
+			break;
+
+		case 2:
+			for(start; start<=end; start ++){
+				$('#pageContent').append('<img class="img-responsive" src="imagenes/2_concept_model/'+start+'.PNG"'+'>');		
+			}
+			break;
 	}
 	
 	if(clicked_id == 'menu1'){
