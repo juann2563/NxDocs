@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>NX Mechatronics concept designer</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/showElements.js"></script>
+
+</head>
+
+<body id="cuerpo" var = 2 ;>
+    <!--Barra de navegación-->
+    <div class="container-fluid">
+        <nav class="navbar navbar-default navbar-fixed-top navbar-toggleable-sm navbar-toggleable-md navbar-toggleable-lg">
+          <div class="container-fluid" id="bar">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="imagenes/UGNX.png" style="width: 28px; height: 28px;">
+                </a>
+                <p class="navbar-text">Creating a concept model</p>
+                <!--Botones para avanzar y retroceder en las actividades-->
+                <a href="#" id="next" type="button" class="btn btn-default navbar-btn pull-right" onclick="showContentWithAuxBtn(this.id);">
+                    Next<span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+                <a href="#" id="back" type="button" class="btn btn-default navbar-btn pull-right" onclick="showContentWithAuxBtn(this.id);">
+                    <span class="glyphicon glyphicon-chevron-left"></span>Back
+                </a>
+            </div>
+
+          </div>
+        </nav>
+        <!-- Menu lateral-->
+        <div class="row">
+            <div class="col-sm-2 col-md-2 col-lg-4" id="menu">
+                <ul class="nav nav-pills nav-stacked">
+                <!--The function selectContent paremeter are: (start name img, end name img, id element) the images have name with number from 1-98-->
+                    <li class="active" role="presentation" id="menu1" start = 1 ; end = 1 ; select= 2 ; onclick="selectContent(this.id);"><a href="#">Creating a concept model</a></li>
+
+                    <li role="presentation" id="menu2" select= 2 ; start = 2 ; end = 5 ; onclick="selectContent(this.id);">
+                        <a href="#">
+                            <span class="glyphicon glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                            Create joints with a physical limitation
+                        </a> 
+                    </li>
+                    
+                    <li role="presentation" id="menu3" select= 2 ; start = 6 ; end = 12 ; onclick="selectContent(this.id);">
+                        <a href="#">
+                            <span class="glyphicon glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                            Reproducing and removing parts for assembly line simulations
+                        </a> 
+                    </li>
+
+                    <li role="presentation" id="menu4" select= 2 ; start = 13 ; end = 19 ; onclick="selectContent(this.id);">
+                        <a href="#">
+                            <span class="glyphicon glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                            Connect parts with springs
+                        </a> 
+                    </li>
+
+                    <li role="presentation" id="menu5" start = 20 ; end = 21 ; select= 2 ; onclick="selectContent(this.id);"><a href="#">Creating operations to control motion</a></li>
+
+                    <li role="presentation" id="menu6" select= 2 ; start = 22 ; end = 44 ; onclick="selectContent(this.id);">
+                        <a href="#">
+                            <span class="glyphicon glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                            Use operations to control motion
+                        </a> 
+                    </li>
+                    
+                    <li role="presentation" id="menu7" start = 45 ; end = 45 ; select= 2 ; onclick="selectContent(this.id);"><a href="#">Using cams for motion relationships</a></li>
+
+                    <li role="presentation" id="menu8" select= 2 ; start = 46 ; end = 59 ; onclick="selectContent(this.id);">
+                        <a href="#">
+                            <span class="glyphicon glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                            Use operations to control motion
+                        </a> 
+                    </li>
+                    <li role="presentation" id="menu9" select= 2 ; start = 60 ; end = 65 ; onclick="selectContent(this.id);">
+                        <a href="#">
+                            <span class="glyphicon glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                            Organize the Physics Navigator
+                        </a> 
+                    </li>
+                    <li role="presentation" id="menu10" start = 66 ; end = 66 ; select= 2 ; onclick="selectContent(this.id);"><a href="#">Using runtime parameters as variables</a></li>
+                    <li role="presentation" id="menu11" select= 2 ; start = 67 ; end = 69 ; onclick="selectContent(this.id);">
+                        <a href="#">
+                            <span class="glyphicon glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                            Use runtime parameters as variables
+                        </a> 
+                    </li>
+
+                    <li role="presentation" id="menu12" start = 70 ; end = 70 ; select= 2 ; onclick="selectContent(this.id);"><a href="#">Use runtime expressions to create a relationship between actuators</a></li>
+                    
+                    <li role="presentation" id="menu13" select= 2 ; start = 71 ; end = 73 ; onclick="selectContent(this.id);">
+                        <a href="#">
+                            <span class="glyphicon glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                            Use formulas to create motion relationships
+                        </a> 
+                    </li>
+                    
+                    <li role="presentation" id="menu14" start = 74 ; end = 75 ; select= 2 ; onclick="selectContent(this.id);"><a href="#">Duplicating geometry with different physics properties</a></li>
+
+                    <li role="presentation" id="menu15" select= 2 ; start = 76 ; end = 87 ; onclick="selectContent(this.id);">
+                        <a href="#">
+                            <span class="glyphicon glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                            Assign different motion characteristics to multiple instances of an assembly
+                        </a> 
+                    </li>
+
+                    <li role="presentation" id="menu16" start = 88 ; end = 88 ; select= 2 ; onclick="selectContent(this.id);"><a href="#">Using collision sensors to trigger property changes</a></li>
+
+                    <li role="presentation" id="menu17" select= 2 ; start = 89 ; end = 93 ; onclick="selectContent(this.id);">
+                        <a href="#">
+                            <span class="glyphicon glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                            Use sensors to trigger display and geometry changes
+                        </a> 
+                    </li>
+
+                    <li role="presentation" id="menu18" start = 94 ; end = 94 ; select= 2 ; onclick="selectContent(this.id);"><a href="#">Exporting electronics to SIMIT</a></li>
+                    
+                    <li role="presentation" id="menu19" select= 2 ; start = 95 ; end = 97 ; onclick="selectContent(this.id);">
+                        <a href="#">
+                            <span class="glyphicon glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                            Use sensors to trigger display and geometry changes
+                        </a> 
+                    </li>
+
+
+                </ul>
+            </div>
+            <!-- Contenido a mostrar-->
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="container-fluid" id="pageContent">
+                            <img class="img-responsive" src="imagenes/2_concept_model/1.PNG" alt="1">
+                            <br>
+                            <button id="parts" class="btn btn-primary btn-lg" onclick="downloadParts();">Download Parts</button>
+                            <br>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
