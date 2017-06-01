@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>NX Mechatronics concept designer</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/showElements.js"></script>
+
+</head>
+
+<body id='cuerpo' var=1 ;>
+    <!--Barra de navegación-->
+    <div class="container-fluid">
+        <nav class="navbar navbar-default navbar-fixed-top navbar-toggleable-sm navbar-toggleable-md navbar-toggleable-lg">
+          <div class="container-fluid" id="bar">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="imagenes/UGNX.png" style="width: 28px; height: 28px;">
+                </a>
+                <p class="navbar-text">Developing a detailed model</p>
+                <!--Botones para avanzar y retroceder en las actividades-->
+                <a href="#" id="next" type="button" class="btn btn-default navbar-btn pull-right" onclick="showContentWithAuxBtn(this.id);">
+                    Next<span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+                <a href="#" id="back" type="button" class="btn btn-default navbar-btn pull-right" onclick="showContentWithAuxBtn(this.id);">
+                    <span class="glyphicon glyphicon-chevron-left"></span>Back
+                </a>
+            </div>
+
+          </div>
+        </nav>
+        <!-- Menu lateral-->
+        <div class="row">
+            <div class="col-sm-2 col-md-2 col-lg-4" id="menu">
+                <ul class="nav nav-pills nav-stacked">
+                <!--The function selectContent paremeter are: (start name img, end name img, id element) the images have name with number from 1-98-->
+                    <li class="active" role="presentation" select= 1 ; id="menu1" start = 1 ; end = 1 ; onclick="selectContent(this.id);"><a href="#">Mechatronics concept designer Fundamentals</a></li>
+
+                    <li role="presentation" id="menu2" select= 1 ; start=2 ; end=3; onclick="selectContent(this.id);"><a href="#">Introduction to Mechatronics concept designer</a></li>
+
+                    <li role="presentation" id="menu3" select= 1 ; start = 4 ; end = 5 ; onclick="selectContent(this.id);"><a href="#">Systems engineering models overview</a></li>
+
+                    <li role="presentation" id="menu4" select= 1 ; start = 6 ; end = 7 ; onclick="selectContent(this.id);"><a href="#">Concept model overview</a></li>
+
+                    <li role="presentation" id="menu5" select= 1 ; start = 8 ; end = 9 ; onclick="selectContent(this.id);"><a href="#">Detailed model overview</a></li>
+
+                    <li role="presentation" id="menu6" select= 1 ; start = 10 ; end = 12 ; onclick="selectContent(this.id);"><a href="#">Virtual commissioning overview</a></li>
+
+                    <li role="presentation" id="menu7" select= 1 ; start = 13 ; end = 17 ; onclick="selectContent(this.id);"><a href="#">Identify Mechatronics Concept Designer ribbon bars and navigators</a></li>
+
+                    <li role="presentation" id="menu8" select= 1 ; start = 18 ; end = 18 ; onclick="selectContent(this.id);"><a href="#">Modularity and reuse with Mechatronics Concept Designer</a></li>
+
+                    <li role="presentation" id="menu9" select= 1 ; start = 19 ; end = 21 ; onclick="selectContent(this.id);">
+                        <a href="#">
+                            <span class="glyphicon glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                            Play a simulation
+                        </a> 
+                    </li>
+                    <li role="presentation" id="menu10" select= 1 ; start = 25 ; end = 30 ; onclick="selectContent(this.id);"><a href="#">Using joints to direct motion</a>
+                    </li>
+
+                    <li role="presentation" id="menu11" select= 1 ; start = 31; end = 41 ; onclick="selectContent(this.id);">
+                        <a href="#">
+                            <span class="glyphicon glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                            Apply gravity and motion restrictions with joins
+                        </a> 
+                    </li>
+
+                    <li role="presentation" id="menu12" select= 1 ; start = 51 ; end = 55 ; onclick="selectContent(this.id);"><a href="#">Understanding collision bodies</a></li>
+
+                    <li role="presentation" id="menu13" select= 1 ; start = 56; end = 67 ; onclick="selectContent(this.id);">
+                        <a href="#">
+                            <span class="glyphicon glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                            Make objects collide during simulations
+                        </a> 
+                    </li>
+
+                    <li role="presentation" id="menu14" select= 1 ; start = 68 ; end = 68 ; onclick="selectContent(this.id);"><a href="#">Use actuators to move geometry</a></li>
+
+                    <li role="presentation" id="menu15" select= 1 ; start = 69; end = 79 ; onclick="selectContent(this.id);">
+                        <a href="#">
+                            <span class="glyphicon glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                            Apply motion with actuators and transport surfaces
+                        </a> 
+                    </li>
+
+                    <li role="presentation" id="menu16" select= 1 ; start = 80; end = 90 ; onclick="selectContent(this.id);">
+                        <a href="#">
+                            <span class="glyphicon glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                            Control motion with coupled joints and actuators
+                        </a> 
+                    </li>
+
+                    <li role="presentation" id="menu17" select= 1 ; start = 91; end = 97 ; onclick="selectContent(this.id);">
+                        <a href="#">
+                            <span class="glyphicon glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                            Organize the Physics Navigator
+                        </a> 
+                    </li>
+
+                </ul>
+            </div>
+            <!-- Contenido a mostrar-->
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="container-fluid" id="pageContent">
+                            <img class="img-responsive" src="imagenes/1_fundamentals/1.PNG" alt="1">
+                            <br>
+                            <button id="parts" class="btn btn-primary btn-lg" onclick="downloadParts();">Download Parts</button>
+                            <br>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
