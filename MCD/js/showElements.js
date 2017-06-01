@@ -83,7 +83,7 @@ function selectContent(clicked_id){
 }
 // Download mechatronics parts
 function downloadParts(){
-	window.location.href = 'parts_mechatronics/archivos_mechatronics.zip';
+	window.location.href = 'parts_mechatronics/parts_mechatronics.zip';
 }
 //navigate through menu with buttons next and back
 function showContentWithAuxBtn(clicked_id){

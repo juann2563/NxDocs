@@ -17,6 +17,7 @@
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/stylesIndex.css">
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/mainMenu.js" ></script>
     <!-- <script type="text/javascript" src="js/showElements.js"></script>
  -->
 </head>
@@ -47,16 +48,16 @@
             <div class="col-sm-2 col-md-2 col-lg-4">
                 
                 <div id="menuIndex">
-                    <div class="panel list-group">
+                    <div class="list-group">
                         <a href="#" class="list-group-item" data-toggle="collapse" data-target="#sm" data-parent="#menuIndex">Mechatronics concept designer 
                             <span class="label label-info">4</span> 
                             <span class="glyphicon glyphicon-tag pull-right"></span>
                         </a>
                         <div id="sm" class="sublinks collapse">
-                            <a id = "1" class="list-group-item small"><span class="glyphicon glyphicon-chevron-right"></span> Mechatronic concept designer fundamentals</a>
-                            <a id = '2' class="list-group-item small"><span class="glyphicon glyphicon-chevron-right"></span> Creating a concept model</a>
-                            <a id = '3' class="list-group-item small"><span class="glyphicon glyphicon-chevron-right"></span> Developing a detailed model</a>
-                            <a id='4' class="list-group-item small"><span class="glyphicon glyphicon-chevron-right"></span> Virtual commissioning with Mechatronics Concept Designer</a>
+                            <a id = "1" class="list-group-item small" onclick="menu(this.id);"><span class="glyphicon glyphicon-chevron-right"></span> Mechatronic concept designer fundamentals</a>
+                            <a id = '2' class="list-group-item small" onclick="menu(this.id);"><span class="glyphicon glyphicon-chevron-right"></span> Creating a concept model</a>
+                            <a id = '3' class="list-group-item small " onclick="menu(this.id);"><span class="glyphicon glyphicon-chevron-right"></span> Developing a detailed model</a>
+                            <a id='4' class="list-group-item small" onclick="menu(this.id);"><span class="glyphicon glyphicon-chevron-right"></span> Virtual commissioning with Mechatronics Concept Designer</a>
                         </div>
                      <a href="#" class="list-group-item" data-toggle="collapse" data-target="#sl" data-parent="#menuIndex">TASKS <span class="glyphicon glyphicon-tag pull-right"></span></a>
                      <div id="sl" class="sublinks collapse">
@@ -72,9 +73,9 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="container-fluid" id="pageContent">
-                            <img class="img-responsive" src="imagenes/1_fundamentals/1.PNG" alt="1">
+                            <img class="img-responsive" src="imagenes/nx.jpg" alt="1">
                             <br>
-                            <button id="parts" class="btn btn-primary btn-lg" onclick="downloadParts();">Download Parts</button>
+                            <button id="parts" class="btn btn-primary btn-lg btn-block" onclick="downloadParts();">Download Parts</button>
                             <br>
                         </div>
                     </div>
