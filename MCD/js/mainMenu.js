@@ -11,6 +11,10 @@ function menu(clicked_id){
 		case '3':
 			window.open('mcd3.html','_blank','height='+screen.height+', width='+screen.width);
 		break;
+
+		case '4':
+			window.open('mcd4.html','_blank','height='+screen.height+', width='+screen.width);
+		break;
 	}
 
 }
