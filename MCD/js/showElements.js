@@ -51,7 +51,7 @@ function selectContent(clicked_id){
 			break;
 
 		case 4:
-			removeClassActive(clicked_id,11);
+			removeClassActive(clicked_id,12);
 			break;
 	}
 	// function remove class for
@@ -118,8 +118,8 @@ function showContentWithAuxBtn(clicked_id){
 			}	
 		}
 		if (parseInt($('#cuerpo').attr('var')) == 4) {
-			if(content>11){
-				content = 11;
+			if(content>12){
+				content = 12;
 			}	
 		}			
 	}
