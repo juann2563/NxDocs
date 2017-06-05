@@ -49,6 +49,10 @@ function selectContent(clicked_id){
 		case 3:
 			removeClassActive(clicked_id,11);
 			break;
+
+		case 4:
+			removeClassActive(clicked_id,11);
+			break;
 	}
 	// function remove class for
 	
@@ -71,6 +75,12 @@ function selectContent(clicked_id){
 		case 3:
 			for(start; start<=end; start ++){
 				$('#pageContent').append('<img class="img-responsive" src="imagenes/3_detailed_model/'+start+'.PNG"'+'>');		
+			}
+			break;
+
+		case 4:
+			for(start; start<=end; start ++){
+				$('#pageContent').append('<img class="img-responsive" src="imagenes/4_virtual/'+start+'.PNG"'+'>');		
 			}
 			break;
 	}
@@ -106,7 +116,12 @@ function showContentWithAuxBtn(clicked_id){
 			if(content>11){
 				content = 11;
 			}	
-		}		
+		}
+		if (parseInt($('#cuerpo').attr('var')) == 4) {
+			if(content>11){
+				content = 11;
+			}	
+		}			
 	}
 	else {
 		content = content - 1;
