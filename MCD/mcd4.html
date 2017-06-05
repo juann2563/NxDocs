@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>NX Mechatronics concept designer</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/showElements.js"></script>
+
+</head>
+
+<body id='cuerpo' var=3 ;>
+    <!--Barra de navegación-->
+    <div class="container-fluid">
+        <nav class="navbar navbar-default navbar-fixed-top navbar-toggleable-sm navbar-toggleable-md navbar-toggleable-lg">
+          <div class="container-fluid" id="bar">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="imagenes/UGNX.png" style="width: 28px; height: 28px;">
+                </a>
+                <p class="navbar-text">Developing a detailed model</p>
+                <!--Botones para avanzar y retroceder en las actividades-->
+                <a href="#" id="next" type="button" class="btn btn-default navbar-btn pull-right" onclick="showContentWithAuxBtn(this.id);">
+                    Next<span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+                <a href="#" id="back" type="button" class="btn btn-default navbar-btn pull-right" onclick="showContentWithAuxBtn(this.id);">
+                    <span class="glyphicon glyphicon-chevron-left"></span>Back
+                </a>
+            </div>
+
+          </div>
+        </nav>
+        <!-- Menu lateral-->
+        <div class="row">
+            <div class="col-sm-2 col-md-2 col-lg-4" id="menu">
+                <ul class="nav nav-pills nav-stacked">
+                <!--The function selectContent paremeter are: (start name img, end name img, id element) the images have name with number from 1-98-->
+                    <li class="active" role="presentation" select= 3 ; id="menu1" start = 1 ; end = 2 ; onclick="selectContent(this.id);"><a href="#">Detailed model overview</a></li>
+
+                    <li role="presentation" id="menu2" select= 3 ; start = 3 ; end = 9 ; onclick="selectContent(this.id);">
+                        <a href="#">
+                            <span class="glyphicon glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                            Exchange basic geometry with detailed models
+                        </a> 
+                    </li>
+
+                    <li role="presentation" select= 3 ; id="menu3" start = 10 ; end = 10 ; onclick="selectContent(this.id);"><a href="#">Using tags to read and write parameters</a></li>
+
+                    <li role="presentation" id="menu4" select= 3 ; start = 11 ; end = 16 ; onclick="selectContent(this.id);">
+                        <a href="#">
+                            <span class="glyphicon glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                            Use tags to read and write parameters during simulation
+                        </a> 
+                    </li>
+
+                    <li role="presentation" select= 3 ; id="menu5" start = 17 ; end = 17 ; onclick="selectContent(this.id);"><a href="#">Using internal signals to control the model</a></li>
+
+                    <li role="presentation" id="menu6" select= 3 ; start = 18 ; end = 24 ; onclick="selectContent(this.id);">
+                        <a href="#">
+                            <span class="glyphicon glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                            Create signals within MCD
+                        </a> 
+                    </li>
+
+                    <li role="presentation" id="menu7" select= 3 ; start = 25 ; end = 28 ; onclick="selectContent(this.id);">
+                        <a href="#">
+                            <span class="glyphicon glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                            Convert runtime parameters to signals
+                        </a> 
+                    </li>
+
+                    <li role="presentation" select= 3 ; id="menu8" start = 29 ; end = 29 ; onclick="selectContent(this.id);"><a href="#">Use MTB and NC integration with MCD</a></li>
+
+                    <li role="presentation" id="menu9" select= 3 ; start = 30 ; end = 42 ; onclick="selectContent(this.id);">
+                        <a href="#">
+                            <span class="glyphicon glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                            Integrate NC code with Mechatronics Concept Designer
+                        </a> 
+                    </li>
+
+                    <li role="presentation" select= 3 ; id="menu10" start = 43 ; end = 43 ; onclick="selectContent(this.id);"><a href="#">Use MCD with ECAD</a></li>
+                    
+                    <li role="presentation" id="menu11" select= 3 ; start = 44 ; end = 48 ; onclick="selectContent(this.id);">
+                        <a href="#">
+                            <span class="glyphicon glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                            Integrate mechatronics with ECAD
+                        </a> 
+                    </li>
+
+                </ul>
+            </div>
+            <!-- Contenido a mostrar-->
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="container-fluid" id="pageContent">
+                            <img class="img-responsive" src="imagenes/3_detailed_model/1.PNG" alt="1">
+                            <img class="img-responsive" src="imagenes/3_detailed_model/2.PNG" alt="1">
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
